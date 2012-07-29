@@ -513,7 +513,6 @@ span.post-last-author, span.post-list-author {
 }
 
 #comment-form-avatar {
-	float: left;
 	margin-left: 10px;
 	opacity: 0.5;
 }
@@ -551,6 +550,7 @@ span.post-last-author, span.post-list-author {
 }
 
 #comment-textarea {
+	vertical-align: top;
 	display: inline-block;
 	margin: 4px 0 4px 5px;
 	padding: 5px;
