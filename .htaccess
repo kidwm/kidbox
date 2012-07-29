@@ -1,0 +1,22 @@
+RewriteEngine On 
+
+RewriteRule ^$ index.php [L]
+RewriteRule ^(\d*)$ index.php?do=view&to=$1 [L,QSA]
+RewriteRule ^(\w*)/post$ index.php?at=$1&do=post [L,QSA]
+RewriteRule ^edit/(\d*)$ index.php?do=edit&to=$1 [L,QSA]
+RewriteRule ^delete/(\d*)$ index.php?do=delete&to=$1 [L,QSA]
+RewriteRule ^comment/(\d*)$ index.php?do=comment&to=$1 [L,QSA]
+RewriteRule ^clear/(\d*)$ index.php?do=clear&to=$1 [L,QSA]
+RewriteRule ^reply/(\d*)$ index.php?do=reply&to=$1 [L,QSA]
+RewriteRule ^(\w*)/$ index.php?do=board&at=$1 [L,QSA]
+RewriteRule ^action/(\w*)/(\w*)$ index.php?do=action&at=$2&to=$1 [L,QSA]
+RewriteRule ^action/(\w*)$ index.php?do=action&to=$1 [L,QSA]
+RewriteRule ^member/(\w*)$ index.php?do=member&to=$1 [L,QSA]
+RewriteRule ^join$ index.php?do=join [L,QSA]
+RewriteRule ^modify$ index.php?do=modify [L,QSA]
+RewriteRule ^feed$ index.php?do=feed [L,QSA]
+RewriteRule ^(\w*)$ index.php?do=$1 [L,QSA]
+
+#Lines Below Only Work When Be Put In Site Root Directory
+ErrorDocument 403 /index.php?do=403
+ErrorDocument 404 /index.php?do=404
